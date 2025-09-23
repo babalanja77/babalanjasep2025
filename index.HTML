@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achsin</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&family=Rubik+Burned&family=Rubik+Distressed&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+html {
+    box-sizing: border-box ;
+    --duration: .45s ;
+    --cubic: cubic-bezier(0.4, 0, 0.2, 1) ;
+    --color-1: #fff;
+    --color-2: #fff;
+}
+html *,
+html *::before,
+html *::after {
+ box-sizing: inherit ;
+}
+body {
+    margin: 0 ;
+    height: 100vh ;
+    overflow: auto ;
+    align-items: center ;
+    justify-content: center ; 
+    background-color: white;
+    font-family: 'Arial', serif;
+}
+a:active {
+color:red;
+}
+.menu {
+    margin: 0 ;
+    width: 100% ;
+    display: flex ;
+    height: 6em ;
+    user-select: none ;
+    position: fixed;
+    align-items: center ;
+    padding: 0 0.2em 0.6em ;
+    justify-content: center ;
+    background-color: #FF2E00 ;
+    border-radius: 0em 0em 0em 0em ;
+    -webkit-tap-highlight-color: transparent ;
+z-index:999999;
+}
+.menu-lapisan {
+    width: 100% ;
+    display: flex ;
+    height: 3.9em ;
+    position: fixed;
+    background-color: white ;
+z-index:99999;
+}
+@media (max-width: 42.625em) {
+  .menu {
+    font-size: .55em ;
+  }
+.menu__item {
+left:-2.6em;
+    all: unset ;
+    flex-grow: 1 ;
+    display: flex ;
+    cursor: pointer ;
+    overflow: hidden ;
+    padding-top:0.5em ;
+    position: relative ;
+    align-items: center ;
+    color: var(--color-1) ;
+    justify-content: center ;
+    transition: flex-grow var(--duration) var(--cubic) ;
+}
+.menu__item::before {
+    top: 15% ;
+    left: 40.0% ;
+    width: 0.9em ;
+    height: 0.9em ;
+    content: " ";
+    position: absolute ;
+    border-radius: 50% ;
+    transform: scale(0) ;
+    transform-origin: left center ;
+    background-color: yellow;
+    transition: transform var(--duration) var(--cubic) ;
+}
+.menu__item::after {
+    left: 0;
+    bottom: 0 ;
+    content: " " ;
+    height: 2px ;
+    position: absolute ;
+    border-radius: 2em ;
+    transform-origin: center ;
+    background-color: currentColor ;
+    width: calc( var(--lineWidth) + 5px ) ;
+    transform: translate3d(3em , 0, 0) scaleX(0) ;
+    transition: transform calc( var(--duration) + .2s) var(--cubic) ;
+}
+.menu_item.active .menu_icon {
+    transform: translate3d(-95% , 0, 0) ;
+}
+.achsinfont1
+{font-family: 'DynaPuff', cursive;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.containerr .input{
+	border: 0;
+	outline: none;
+	color: #8b7d77;
+}
+.search_wrap.search_wrap_4 .search_box .btn{
+	left: 0px;
+	border-radius: 50%;
+}
+#spin { 
+  color:black; } 
+#spin:after{
+  content:"";animation:4s linear infinite spin
+}
+ @keyframes spin { 
+   0% { content:""; } 
+   100%{ content:""; } 
+ } 	
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.card {
+  width: 98%;
+  margin-top: 0%;
+  margin-left: 1%;
+  height: 50%;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.card a {
+
+  cursor: none;
+
+}
+
+.container::after, .row::after {
+
+  content: "";
+
+  clear: both;
+
+  display: table;
+
+}
+
+
+
+.item-nearby-row { 
+
+float: left;  
+
+border-radius: 9px; 
+
+background: #ff000000; 
+
+width: 0%; 
+
+height: auto; 
+
+margin-left: 0.8% !important; 
+
+margin-right: 5px !important; 
+
+margin-top: 0px !important; 
+
+margin-bottom: 10px !important; 
+
+justify-content: center; 
+
+align-items: center;  
+
+display: flex; 
+
+flex-direction: column; 
+
+min-width: 50px; 
+
+max-width: 6.8%; 
+
+overflow: hidden;  
+
+font-family: arial ;
+
+text-decoration: none;  -webkit-tap-highlight-color: transparent; transition:
+
+background-color 0.1s ease-in-out; 
+
+padding:0px;
+
+z-index:999;
+
+ } 
+
+
+
+.item-nearby-link {width: 100%; text-decoration: none; color: black; 
+
+}
+
+.item-nearby-image {width: 100% ! important; 
+
+border-radius: 13px 13px 13px 13px;
+
+ margin: 0px !important; 
+
+}
+
+
+
+.item-nearby-distance {  
+
+margin-left: 4px;
+
+margin-top:9px; 
+
+color:white;
+
+padding-left:4px;
+
+width:50% !important;
+
+background:#F56F23 !important;
+
+display: block; 
+
+font-size: 13px !important; 
+
+border-radius:9px;
+
+}
+
+.item-nearby-title {
+
+white-space: nowrap;
+
+font-weight: 450;
+
+ margin-top: 5px; 
+
+margin-left: 5px; 
+
+font-family:'Arial', sans-serif;
+
+display: block;
+
+  font-size: 90px;
+
+color:black;
+
+}
+
+
+
+.item-nearby-status {  margin-bottom: 5px; margin-left: 5px;  
+
+color: white; 
+
+font-weight: bold;
+
+ font-size: 13px !important; 
+
+}
+
+.item-nearby-status-note {
+margin-top: -100%; float: right;
+ margin-right: 5px; 
+
+margin-left: 0%;
+
+ border-radius:  5px; 
+
+opacity: 95%;
+
+ height: auto; width: 100%;
+
+ background:rgb(146 151 179 / 33%);
+
+backdrop-filter: blur(20px);
+
+ color: white;
+
+ font-size: 10px;
+
+ display: inline-block;  
+
+align-items: center;
+
+ justify-content: center; 
+
+ overflow: hidden; 
+
+  font-weight: 550;
+
+  text-align: center;
+
+  top: 0; 
+
+
+
+ }
+
+.item-nearby-status-open { 
+
+position: absolute;
+
+margin-bottom: 0px;
+
+margin-left:-12px;
+
+background-image: url(https://lh3.googleusercontent.com/u/0/d/1TclLjlZ96bjka7MRKEDP8EfgnJ1Yvlmv);
+
+background-size: cover;
+
+width:28.5%;
+
+height:19.5%;
+
+text-align:center;
+
+margin-top:-171px;
+
+ color:white;
+
+ font-size: 15px !important;
+
+font-family:'Arial';
+
+}
+
+* {
+
+	margin: 0;
+
+	padding: 0;
+
+	box-sizing: border-box;
+
+	font-family: 'Arial', sans-serif;
+
+}
+
+
+
+
+
+li {
+
+	list-style: none;
+
+}
+
+.tab1-menu > li {
+
+	position: relative;
+
+	cursor: pointer;
+
+	color: grey;
+
+	transition: all .3s ease;
+
+	white-space: nowrap;
+
+margin-left:-15px;
+
+margin-right:8px;
+
+font-size:17px;
+
+}
+
+.tab1-menu > li:hover {
+
+	color: grey;
+
+}
+
+.tab1-menu > li.active123 {
+
+	color: #000;
+
+font-weight:440;
+
+font-size:17px;
+
+font-family:'Arial';
+
+}
+
+
+
+.content123 h2 {
+
+	font-size: 17px;
+
+	font-weight: 600;
+
+	color: var(--secondary);
+
+	margin-bottom: 10px;
+
+}
+
+.content123 p {
+
+	margin-bottom: 10px;
+
+	color: var(--dark);	
+
+}
+
+#scrrolly33{
+
+width: 99%;
+
+height: auto;
+
+ overflow-x: scroll;
+
+ overflow-y: hidden;
+
+ padding:4px;
+
+margin-top: 38px;
+
+ white-space: nowrap;
+
+ border-radius:0px;    
+
+}
+
+.card22{
+
+    position: relative;
+
+}
+
+
+
+p,button1{
+
+    font-family: "Arial",sans-serif;
+
+    font-size: 10px;
+
+
+
+}
+
+button1{
+position: absolute;
+    background-color: #F55D00;
+    border: none;
+    color: #ffffff;
+    margin: 10px 0 30px 0;
+    padding: 5px 20px;
+    border-radius: 9px;
+    outline: none;
+    cursor: pointer;
+margin-left:64%;
+margin-top:-19px;
+}
+#alerttt{
+    width: 89%;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    position: fixed;
+    margin: auto;
+    left: 3px;
+    right: 0;
+   font-size:15px;
+    bottom: 100px;
+    padding: 8px 0;
+    display: none;
+border-radius:9px;
+}
+h11{
+        color:white;
+        animation:blinkText 2s  infinite;
+    }
+    @keyframes blinkText {
+        0%{opacity:0.1;}
+    30%{opacity:1; text-shadow: 1px 0px 30px yellow;}
+    100%{
+        opacity:0.1;
+    }}
+</style>
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="menu-lapisan"></div>
+<menu class="menu" id="data-menu">
+        <button class="menu__item" data="home">
+            <div class="menu__icon" >
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.1 145" >
+                    <g id="home-anm">
+                        <path stroke-linejoin="round"  stroke-linecap="round" d="M70.5,80.1h40.7"/>
+                        <path d="M35,64v80"/>
+                        <path d="M145.1,143V63"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M24.9,70l65.7-50.7L156.3,70"/>
+                    </g>
+                    <path stroke-linejoin="round" d="M145.1,117.6v33.1c0,1.5-1.2,2.8-2.8,2.8h-28.4c-1.5,0-2.8-1.2-2.8-2.8V126c0-11.3-9.2-20.5-20.5-20.5l0,0
+                    c-11.3,0-20.5,9.2-20.5,20.5v27.5h16H37.8c-1.5,0-2.8-1.2-2.8-2.8v-34.2"/>
+                </svg>
+            </div>
+            <span class="menu__text">Beranda</span>
+        </button>
+               <button class="menu__item" data="strategy">
+            <div class="menu__icon" >
+                <a href="#">
+<div class="icon">
+<img  src="https://lh3.googleusercontent.com/u/0/d/1YbyI6gb2yujYFPDb2D5tXHJwCKvYSXV1"style="width:33px;border-radius:50px;top:1.7%;z-index:5;padding:3px;">
+	</i>
+</div>
+</a>
+            </div>
+            <span class="menu__text">Promo</span>
+        </button>
+        <button class="menu__item" data="security">
+            <div class="menu__icon" >
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179.1 145" >
+                    <path stroke-linecap="round" d="M94,139c-4.8,1.3-8.8,1.7-11.4,1.8c0,0-18.3,1.1-36.9-11.6c-1.9-1.3-4.7-3.2-7.8-6.2c-1.7-1.6-2.9-2.9-3.4-3.6
+                    c0,0-3.6-4.2-6.1-8.6c-4.6-8.4-5.4-18.9-5.5-21l0,0V75.5v-39c0-0.7,0.5-1.3,1.2-1.5l58-14.2c0.2-0.1,0.5-0.1,0.7,0l57.9,14.7
+                    c0.7,0.2,1.1,0.8,1.1,1.5v29.7"/>
+                    <path id="security-cir" stroke-linecap="round" d="M158.3,120.7c0,18.3-14.8,33.1-33.1,33.1s-33-14.8-33-33.1s14.8-33.1,33.1-33.1S158.3,102.4,158.3,120.7z"/>
+                    <g id="security-strok">
+                        <path stroke-linecap="round" d="M151.1,104.5l-25,25c-1.3,1.3-3.5,1.3-4.9,0l-9.1-9.1"/>
+                        <path stroke-linecap="round" d="M82.6,43L23.1,62.3"/>
+                        <path stroke-linecap="round" d="M82.6,68.4L23.1,87.6"/>
+                    </g>
+                </svg>
+            </div>
+            <span class="menu__text">Pesanan</span>
+        </button>
+        <button class="menu__item" data="settings">
+            <div class="menu__icon" >
+                 <a href="#">
+<div class="icon">
+<img  src="https://lh3.googleusercontent.com/u/0/d/1mFLPkdGkGVKNGlb1fblaq05laRx05o2e"style="width:33px;border-radius:50px;top:1.7%;z-index:5;padding:3px;">
+	</i>
+</div>
+</a>
+            </div>
+            <span class="menu__text">Inbox</span>
+        </button>
+
+
+    </menu>
+
+  <div class="show-menu-item" id="AchsinulUmam-menu">
+
+    <div class="AchsinulUmam-menu" id="home">
+
+<br><p>
+
+
+
+	<div class="containerr">
+
+	<div class="search_wrap search_wrap_4">
+
+			<div class="search_box">
+
+				<div class="btn btn_common">
+
+
+
+					<form action="action://act/search">
+<a href="https://jgjk.mobi/act/search">
+					<i class="bx bx-search"></i></a>
+
+				</div>
+
+
+
+<input style="font-size:15px;color:grey" type="search" id="gsearch" name="gsearch" class="input" placeholder="Mo Cari Apa Kaka Boss ?">
+
+</form></div></div></div>
+
+
+
+<a href="https://jgjk.mobi/act/account">
+
+	<img src="{foto}"style="width:37px;float:right;border-radius:50px;position:relative;color:#000;top:-97px;right:7px;z-index:0;padding:0px;">
+
+	</i>
+
+</a>
+
+			
+
+    <div style="height:auto;" class="parent">
+
+      <center>
+
+  <div style="background-color:#fff;
+
+height:100%;border-radius:10px;margin:0px"id="spin">
+
+
+
+
+
+<div class="nama-pengguna">
+
+<i class="bx bxs-wallet bx-tada bx-rotate-27"style="position: absolute;font-size:17px;color:#00ACD6;top:2px;margin-left:-22px;z-index:1"></i>
+
+BabaDoi
+
+</div>
+
+
+
+<marquee
+
+ direction="up" height="38" scrolldelay="200" style="font-family:arial; font-size:10px; color:grey;
+
+ margin-top:11px;margin-left:12px;">lebih praktis bayar dengan saldo aplikasi<br><p style="font-size:14px;color:#000;font-weight: bold;
+
+">{saldo}</p></marquee>
+
+
+
+    </a>
+
+     
+
+  </div></center>
+
+  <center>
+
+    <br>
+
+<div>    <a href="https://jgjk.mobi/act/topup"><img style="padding:0px;margin-top:-16px;
+
+width:23px;" src="https://lh3.googleusercontent.com/u/0/d/1r1S7j00bQXap86WQjynNKudYRt4FoNAF"></a><br><p style="color:white;font-size:13px;margin-top:10px;font-weight:500;
+
+">Topup</p></div></center>
+
+<center>
+
+  <br>
+
+<div>    <a href="https://jgjk.mobi/act/withdraw">
+
+<img style="padding:0px;
+
+margin-top:-16px;width:23px;" src="https://lh3.googleusercontent.com/u/0/d/18LbR_YPSVivcSQjGdLhNVi7W4wbItRGn"></a></a><br><p style="margin-top:10px;color:white;font-size:13px;font-weight:500;
+
+">Tarik</p></div>
+
+</center>
+
+<center>
+
+  <br>
+
+<div>    
+
+<a href="https://achsinfrontand.my.id/QRTransfer/babalanjatf.html?saldo={saldo}&username={username}&nama={nama}&hp={hp}&foto={foto}">
+
+<img style="padding:0px;margin-top:-15px;
+
+width:23px;" src="https://lh3.googleusercontent.com/u/0/d/1KIXGzVd8wONZJe4wGMvD-pEIcEmT68Da"></a><br><p style="color:white;font-size:13px;margin-top:10px;font-weight:500;
+
+">Transfer</p></div></center>
+
+</div>
+
+
+<br>
+<br>
+
+
+
+
+
+
+
+<! --2 editan slider atas-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style>
+.slider-container {
+    position: relative;
+    margin-left: -5%;
+    padding: 0px;
+    top: 32px;
+    margin-top: 2%; /* Tambahkan jarak 20% di sini */
+    float: left;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow: value;
+    height: auto;
+    width: 109%;
+    z-index: 0;
+    border-radius: 0px;
+}
+
+.carousel-item {
+    transition: transform 1s ease;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+}
+</style>
+
+<div class="slider-container">
+    <center>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="action://p/67d971fc44229">
+                        <img class="d-block" src="https://i.ibb.co.com/PZJVx9zp/baba-work-station.webp" alt="baba-work-station">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="babalanja">
+                        <img class="d-block" src="https://i.ibb.co.com/GfCX89M3/babalanja.webp" alt="babalanja">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://jgjk.mobi/m/67aa79146a3a9">
+                        <img class="d-block" src="https://i.ibb.co.com/Y7hRc54b/ppob.webp" alt="ppob">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="action://p/67d971fc44229">
+                        <img class="d-block" src="https://i.ibb.co.com/PZJVx9zp/baba-work-station.webp" alt="baba-work-station">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="babalanja">
+                        <img class="d-block" src="https://i.ibb.co.com/GfCX89M3/babalanja.webp" alt="babalanja">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://jgjk.mobi/m/67aa79146a3a9">
+                        <img class="d-block" src="https://i.ibb.co.com/Y7hRc54b/ppob.webp" alt="ppob">
+                    </a>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </center>
+</div>
+
+<script>
+$(document).ready(function() {
+    setInterval(function() {
+        $('#carouselExampleSlidesOnly').carousel('next');
+    }, 2000);
+});
+</script>
+
+
+
+
+
+
+
+<html>
+<head>
+<title>SALOY BALANJA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+.menu-container {
+    position: relative;
+    margin-left: -5%;
+    padding: 0px;
+    top: 30px;
+    margin-top: 2%;
+    float: left;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow: value;
+    height: auto;
+    width: 109%;
+    z-index: 0;
+    border-radius: 0px;
+}
+
+.menu-container table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.menu-container td {
+    padding: 0;
+}
+
+.menu-container img {
+    width: 100%;
+    border-radius: 0px;
+    background: orange;
+    display: block;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div class="menu-container">
+    <table id="Table_01" width="100%" height="auto" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="6">
+                <a href="">
+                    <img src="https://i.ibb.co.com/jkcN0mMR/SALOY-BALANJA-2-01.gif" alt="SALOY-BALANJA-01">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="">
+                    <img src="https://i.ibb.co.com/CpYrvcfx/SALOY-BALANJA-2-02.gif" alt="SALOY-BALANJA-02">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67c99ccc6fbd7">
+                    <img src="https://i.ibb.co.com/qFc953K0/SALOY-BALANJA-03-BELANJA-PASAR.gif" alt="SALOY-BALANJA-03-BELANJA-PASAR">
+                </a>
+            </td>
+            <td>
+                <a href="https://jgjk.mobi/m/67aa79146a3a9">
+                    <img src="https://i.ibb.co.com/zWHyKxD8/SALOY-BALANJA-04-PULSA-PPOB.gif" alt="SALOY-BALANJA-04-PULSA-PPOB">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67f20dc7c8cc7">
+                    <img src="https://i.ibb.co.com/MkjpsF4N/SALOY-BALANJA-05-BELI-OBAT-APOTIK.gif" alt="SALOY-BALANJA-05-BELI-OBAT-APOTIK">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67d9730041fc7">
+                    <img src="https://i.ibb.co.com/tTzcsj1X/SALOY-BALANJA-06-TOKO-FAVORIT.gif" alt="SALOY-BALANJA-06-TOKO-FAVORIT">
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <img src="https://i.ibb.co.com/ccr2rg7Z/SALOY-BALANJA-2-07.gif" alt="SALOY-BALANJA-07">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="">
+                    <img src="https://i.ibb.co.com/fYK9QRWy/SALOY-BALANJA-2-08.gif" alt="SALOY-BALANJA-08">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67d971fc44229">
+                    <img src="https://i.ibb.co.com/QFRRVKDG/SALOY-BALANJA-09-BABA-WORK-STATION.gif" alt="SALOY-BALANJA-09-BABA-WORK-STATION">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67d97015d7bd6">
+                    <img src="https://i.ibb.co.com/gZbpy83t/SALOY-BALANJA-10-TIKET-PENGINAPAN.gif" alt="SALOY-BALANJA-10-TIKET-PENGINAPAN">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67c477fe0a49d">
+                    <img src="https://i.ibb.co.com/bgFQTfKL/SALOY-BALANJA-11-PANDUAN-PENGGUNAAN.gif" alt="SALOY-BALANJA-11-PANDUAN-PENGGUNAAN">
+                </a>
+            </td>
+            <td>
+                <a href="action://p/67c3faa8ac6c3">
+                    <img src="https://i.ibb.co.com/YBVp78Wb/SALOY-BALANJA-12-KERANJANGA-BALANJA.gif" alt="SALOY-BALANJA-12-KERANJANGA-BALANJA">
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <img src="https://i.ibb.co.com/chmJyDMn/SALOY-BALANJA-2-13.gif" alt="SALOY-BALANJA-13">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <a href="">
+                    <img src="https://i.ibb.co.com/fV6wMh6c/SALOY-BALANJA-2-14.gif" alt="SALOY-BALANJA-14">
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
+
+
+
+
+<html>
+<head>
+<title> kop flash sale ternate</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+.image-container {
+    position: relative;
+    margin-left: -5%;
+    padding: 0px;
+    top: 30px;
+    margin-top: 0%; /* Pastikan ini tidak ada margin atas */
+    float: left;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden; /* Ubah 'value' menjadi 'hidden' untuk menghilangkan overflow */
+    height: auto;
+    width: 109%;
+    z-index: 0;
+    border-radius: 0px;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div class="image-container">
+    <a href="action://p/67d77d389727b"> <img src="https://i.ibb.co.com/q2QTvKB/flash-sale-tra-mnyasal.gif" width="100%" height="auto" alt="Flash Sale Ternate">
+    </a>
+</div>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>SLIDER FLASH SALE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+  .table-container {
+    position: relative;
+    margin-left: -5%;
+    padding: 0px;
+    top: 0; /* Ubah ini untuk menghapus jarak atas */
+    margin-top: 0%; /* Pastikan ini juga tidak ada margin atas */
+    float: left;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    height: auto;
+    width: 109%;
+    z-index: 0;
+    border-radius: 0px;
+  }
+
+  .slider {
+    display: flex;
+    animation: slide 70s linear infinite;
+    width: max-content;
+  }
+
+  .slider img {
+    height: 166px;
+    flex-shrink: 0;
+    width: auto;
+    margin-bottom: 0px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+  <div class="table-container">
+    <div class="slider">
+<a href="action://p/67fc80e85dcde"><img src="https://i.ibb.co.com/bj3fX4Tn/KACAMATA-MOTOR-PAKET.gif" alt=""></a>
+<a href="action://p/67f5eb4b0b834"><img src="https://i.ibb.co.com/GvmmsFvb/PAKET-BATERAI.gif" alt=""></a>
+<a href="action://p/67f7bcef74f4a"><img src="https://i.ibb.co.com/hJDVYFYx/PENGANGKAT-GALON.gif" alt=""></a>
+<a href="action://p/67f855de02dfa"><img src="https://i.ibb.co.com/cSwJ4g6r/BATERAI-CAS-A2.gif" alt=""></a>
+<a href="action://p/67f74046c9f4f"><img src="https://i.ibb.co.com/b5bpsKZr/BEL-RUMAH.gif" alt=""></a>
+<a href="action://p/67f7be8c5ea79"><img src="https://i.ibb.co.com/4nYh2kx6/BLUETOOTH-TRANSMITTER.gif" alt=""></a>
+<a href="action://p/67f7bb759f13c"><img src="https://i.ibb.co.com/fY8Z0WTR/CARD-READER.gif" alt=""></a>
+<a href="action://p/67fca37264111"><img src="https://i.ibb.co.com/NnxCgS4R/FACE-SHIELD.gif" alt=""></a>
+<a href="action://p/67f7b87d5ffab"><img src="https://i.ibb.co.com/GQJzT6Fs/HEADPHONE-ROBOT.gif" alt=""></a>
+<a href="action://p/67fc7e54e3525"><img src="https://i.ibb.co.com/sJvDKGg8/KACAMATA-KATARAK.gif" alt=""></a>
+
+<a href="action://p/67fc80e85dcde"><img src="https://i.ibb.co.com/bj3fX4Tn/KACAMATA-MOTOR-PAKET.gif" alt=""></a>
+<a href="action://p/67f5eb4b0b834"><img src="https://i.ibb.co.com/GvmmsFvb/PAKET-BATERAI.gif" alt=""></a>
+<a href="action://p/67f7bcef74f4a"><img src="https://i.ibb.co.com/hJDVYFYx/PENGANGKAT-GALON.gif" alt=""></a>
+<a href="action://p/67f855de02dfa"><img src="https://i.ibb.co.com/cSwJ4g6r/BATERAI-CAS-A2.gif" alt=""></a>
+<a href="action://p/67f74046c9f4f"><img src="https://i.ibb.co.com/b5bpsKZr/BEL-RUMAH.gif" alt=""></a>
+<a href="action://p/67f7be8c5ea79"><img src="https://i.ibb.co.com/4nYh2kx6/BLUETOOTH-TRANSMITTER.gif" alt=""></a>
+<a href="action://p/67f7bb759f13c"><img src="https://i.ibb.co.com/fY8Z0WTR/CARD-READER.gif" alt=""></a>
+<a href="action://p/67fca37264111"><img src="https://i.ibb.co.com/NnxCgS4R/FACE-SHIELD.gif" alt=""></a>
+<a href="action://p/67f7b87d5ffab"><img src="https://i.ibb.co.com/GQJzT6Fs/HEADPHONE-ROBOT.gif" alt=""></a>
+<a href="action://p/67fc7e54e3525"><img src="https://i.ibb.co.com/sJvDKGg8/KACAMATA-KATARAK.gif" alt=""></a>
+    
+   </div>
+  </div>
+
+<script>
+  const slider = document.querySelector('.slider');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Touch events
+  slider.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    slider.style.cursor = 'grabbing';
+    slider.style.animationPlayState = 'paused';
+  });
+
+  slider.addEventListener('touchend', () => {
+    isDown = false;
+    slider.style.cursor = 'grab';
+    slider.style.animationPlayState = 'running';
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX - slider.offsetLeft;
+    const walk = (x - startX);
+    slider.scrollLeft = scrollLeft - walk;
+    startX = e.touches[0].pageX - slider.offsetLeft;
+  });
+</script>
+</body>
+</html>
+
+
+
+
+<html>
+
+<head>
+
+<title>MOST POPULAR KABAWA</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style>
+
+.table-container {
+    position: relative;
+    margin-left: -5%;
+    padding: 0px;
+    top: 32px;
+    margin-top: 0%;
+    float: left;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    overflow: value;
+    height: auto;
+    width: 109%;
+    z-index: 0;
+    border-radius: 0px;
+}
+
+.table-container img {
+    width: 100%; /* Gambar responsif */
+    display: block; /* Menghilangkan ruang kosong di bawah gambar */
+}
+
+</style>
+
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<div class="table-container">
+
+    <table id="Table_01" width="100%" height="auto" border="0" cellpadding="0" cellspacing="0">
+
+        <tr>
+
+            <td colspan="2">
+                <a href="BABALANJA-2025-fix_03_01 most popular">
+                    <img src="https://i.ibb.co.com/0pDz27RW/MOST-POPULAR-01.webp" alt="Most Popular">
+                </a>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <a href="action://p/67ed5f51bfce1">
+                    <img src="https://i.ibb.co.com/67FSh5LP/BABALANJA-MAMA-FIX-17-FOTOKOPI-PERCETAKAN.webp" alt="Fotokopi Percetakan">
+                </a>
+            </td>
+
+            <td>
+                <a href="action://p/67d974555638a">
+                    <img src="https://i.ibb.co.com/LdkLHrmt/BABALANJA-MAMA-FIX-18-MERCHANDISE.webp" alt="Merchandise">
+                </a>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td colspan="2">
+                <a href="action://p/67d974dea4c6a">
+                    <img src="https://i.ibb.co.com/qLztXMWr/BABALANJA-MAMA-FIX-19-KOP-INFORMASI-EDUKASI.webp" alt="Informasi Edukasi">
+                </a>
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+<! --INFORMASI DAN EDUKASI BANNER SLIDER-->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+<style>
+
+.slider-container {
+
+    position: relative;
+
+    margin-left: -5%;
+
+    padding: 0px;
+
+    top: 32px;
+
+    margin-top: 0%;
+
+    float: left;
+
+    background: white;
+
+    font-family: 'Open Sans', sans-serif;
+
+    overflow: value;
+
+    height: auto;
+
+    width: 109%;
+
+    z-index: 0;
+
+    border-radius: 0px;
+
+}
+
+.carousel-item {
+
+    transition: transform 1s ease;
+
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+
+    background-color: blue;
+
+    border-radius: 50%;
+
+}
+
+.carousel-item img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+</style>
+
+
+
+<div class="slider-container">
+
+    <center>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <a href="">
+
+                        <img class="d-block" src="images/babalanja-infoRMASI-DAN-EDUKASI_01.gif" alt="KATEGORI KEBUTUHAN">
+
+                    </a>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <a href="">
+
+                        <img class="d-block" src="images/babalanja-infoRMASI-DAN-EDUKASI_02.gif" alt="PAKET DATA">
+
+                    </a>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <a href="action://p/67d974dea4c6a">
+
+                        <img class="d-block" src="images/babalanja-infoRMASI-DAN-EDUKASI_03.gif" alt="PULSA">
+
+                    </a>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <a href="">
+
+                        <img class="d-block" src="images/babalanja-infoRMASI-DAN-EDUKASI_01.gif" alt="KARTU PERDANA">
+
+                    </a>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <a href="">
+
+                        <img class="d-block" src="images/babalanja-infoRMASI-DAN-EDUKASI_02.gif" alt="Paket Data">
+
+                    </a>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <a href="">
+
+                        <img class="d-block" src="images/babalanja-infoRMASI-DAN-EDUKASI_03.gif" alt="ABOUT TENTANG KAMI">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                <span class="sr-only">Previous</span>
+
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                <span class="sr-only">Next</span>
+
+            </a>
+
+        </div>
+
+    </center>
+
+</div>
+
+
+
+<script>
+
+$(document).ready(function() {
+
+    setInterval(function() {
+
+        $('#carouselExampleSlidesOnly').carousel('next');
+
+    }, 2000);
+
+});
+
+</script>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Website dengan Iframe</title>
+    <style>
+        /* Atur tinggi iframe agar sesuai dengan tampilan */
+        iframe {
+            width: 103%; /* memperbesar dia pe pinggir2 */
+            height: 100vh; /* Menggunakan 100% dari tinggi viewport */
+            border: none; /* Menghilangkan border */
+            margin-right: 0px; /* Menambahkan margin kanan sebesar 12px */
+            margin-left: -5px; /* Menambahkan margin kiri sebesar 12px */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menyisipkan website lain -->
+    <iframe src="https://extraordinary-lily-9fa3f0.netlify.app/" scrolling="yes"></iframe>
+
+</body>
+</html>
+
+
+
+
+<br>
+
+    </div>
+
+
+
+    <div class="AchsinulUmam-menu" id="strategy">
+
+<br>
+
+  <center>
+
+  <div id='scrrolly33'>
+
+<a href="action://act/balance">
+
+  <div class='box' style="z-index:1;display:inline-block;width:28%;height:102px;margin-right:9px;
+
+            margin-left:6px;border-bottom:.0px solid Gainsboro;border-radius:10px;padding-bottom:0px;background:#ff000000;box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);">
+
+
+
+
+
+     <div class="card1"><p style="font-size:10px;margin-top:-1px;font-weight:500;
+
+">Balance:</p></div>
+
+
+
+       <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top:11px;white-space: normal;padding:5px;text-align:Left;"><h style="font-size:14px;font-weight: 700;color:#000; margin-left:0px;white-space: nowrap;
+
+">{saldo}</h><br><p1 style="
+
+font-size:10px;top:5px;color:black; font-weight:450;margin-left:0px;">Total saldo kamu saat ini</p1>
+
+
+
+  <hr style="border-radius:11%;margin-top:6px;width:89%;border:2px solid #F56F23;
+
+"></hr>
+
+
+
+</div>
+
+</div>
+
+</a>
+
+      
+
+<a href="#">
+
+  <div class='box' style="z-index:1;display:inline-block;width:28%;height:102;margin-right:9px;
+
+            margin-left:6px;border-bottom:.5px solid Gainsboro;border-radius:10px;padding-bottom:1px;background:#ff000000;box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);">
+
+
+
+     <div class="card1"><p style="font-size:10px;margin-top:-1px;font-weight:500">Voucher:</p></div>
+
+
+
+       <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top:11px;white-space: normal;padding:5px;text-align:Left;"><h style="font-size:14px;font-weight: 700;color:#000;margin-left:3px;
+
+">3</h><br><p1 style="font-size:10px;color:black; font-weight:450;
+
+top:5px;">Gunakan Vouchermu</p1>
+
+
+
+    <hr style="border-radius:11%;margin-top:6px;width:89%;border:2px solid #DE1895;
+
+"></hr>
+
+
+
+</div>
+
+</div>
+
+</a>
+
+
+
+       <a href="action://act/customer_points
+
+">
+
+       <div class='box' style="z-index:1;display:inline-block;width:28%;height:102;margin-right:9px;
+
+            margin-left:6px;border-bottom:.5px solid Gainsboro;border-radius:10px;padding-bottom:1px;background:#ff000000;box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.2);
+
+">
+
+
+
+     <div class="card1"><p style="font-size:11px;margin-top:-1px;font-weight:500;">Point:</p1></div>
+
+
+
+       <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top:11px;white-space: normal;padding:5px;text-align:Left;"><h style="font-size:14px;font-weight: 700;color:#000;margin-left:3px;
+
+">{poin}</h><br><p1 style="
+
+font-size:10px;font-weight:450;color:#000;top:5px;">Tukar point sekarang</p1>
+
+<hr style="border-radius:11%;margin-top:6px;width:89%;border:2px solid #01ADD5;
+
+"></hr>
+
+</div> 
+
+      </div>
+
+  
+
+</a>
+
+</center>
+
+
+
+
+
+<!--TABEL VERIFIKASI EMAIL-->
+
+<br>
+
+<div class="alertt">
+
+
+
+<img src="https://lh3.googleusercontent.com/u/0/d/12fuDTZ0PiOgcMMcoDdIa4023hmwIpnNB" alt="Avatar" class="image33587" style="width: 22.5%; margin-right: 7px; margin-top: -18px; margin-left:-14px;border: px solid yellow; border-radius: 0%;box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2); float:left;"> 
+
+
+
+  <div class="h255">Verifikasi Emailmu :{verifikasi_email}
+
+</div>
+
+<div class="h355">Agar dapat melakukan Transaksi</div>
+
+<a href="action://act/verified_email"><button12366>Lanjut</button12366></a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="achsinfont1" style="float:left;color:var(--black);margin-left:10px;margin-top:0px;
+
+font-size:17px;text-shadow:var(--box-shadow);
+
+font-weight: 503">Promo menarik buatmu馃彿</div>
+
+
+
+<div class="texttittle9" style="margin-left:10px; margin-right:35px;font-size:14px;font-family: 'Poppins', sans-serif; margin-top:55px;color:var(--black); ">Khusus buat kamu pengguna baru #GetNow. </div>
+
+
+
+
+
+<hr style="margin-left:12px;width:93%;border:1px solid #ebecf0;box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
+
+margin-top:9px;
+
+"></hr>
+
+
+
+<style>
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+  
+
+
+
+<div style="z-index:4;height:0%; margin-left:7px" id="berita" class="tabcontentt">
+
+
+
+  <a href="#">
+
+       <div class='box' style="z-index:5;display:inline-block;width:97%;height:auto;margin-right:0px;
+
+            margin-left:1px;margin-top:8px;box-shadow:0 0 24px -4px rgba(0,0,0,.12);border-radius:19px;padding-bottom:1px;">
+
+
+
+
+
+       <img style='width:100%;border-top-left-radius: 19px;border-top-right-radius: 19px;background:linear-gradient(to right top,#F14E2C,
+
+    #F14E2C,
+
+    #F14E2C,
+
+#F14E2C);' src=https://i.ibb.co.com/7dxJq3mY/dffdf.jpg'>
+
+<div class="card22"></div>
+
+       </a>
+
+
+
+
+
+       <div style="border-top: 2px dashed #000;
+
+border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;color:#darkblack;white-space: normal;padding:15px;text-align:Left;"><h style="font-size:16px;color:#000;font-weight: 450">Promo Ongkir dari 7000 jadi 5000  <br>(Edisi Terbatas) </h><br>
+
+
+
+<p style="font-size:15px; color:grey; margin-left:2px;"><i class="bx bx-copy"style="font-size:14px;color:grey;margin-top:1%;left:1px;z-index:1" id="text2"></i></p><button1 onclick="copy('text2')">copy</button1></div> </div><br><br>
+
+
+
+       
+
+       <a href="#">
+
+       <div class='box' style="z-index:5;display:inline-block;width:97%;height:auto;margin-right:0px;
+
+            margin-left:1px;margin-top:10px;box-shadow:0 0 24px -4px rgba(0,0,0,.12);border-radius:19px;padding-bottom:1px;">
+
+
+
+
+
+       <img style='width:100%;border-top-left-radius: 19px;border-top-right-radius: 19px;background:linear-gradient(to right top,#F14E2C,
+
+    #F14E2C,
+
+    #F14E2C,
+
+#F14E2C);' src=https://i.ibb.co.com/4wgq0pCK/qweqwewqe.jpg'>
+
+<div class="card22"></div>
+
+       </a>
+
+
+
+
+
+       <div style="border-top: 2px dashed #000;
+
+border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;color:#darkblack;white-space: normal;padding:15px;text-align:Left;">
+
+
+
+
+
+
+
+<h style="font-size:16px;color:#000;font-weight: 450">Belanja Hemat<br>Hemat Waktu Hemat Popoje </h><br>
+
+
+
+<p style="font-size:15px; color:grey; margin-left:2px;"><i class="bx bx-copy"style="font-size:14px;color:grey;margin-top:1%;left:1px;z-index:1" id="text1"></i></p><button1 onclick="copy('text1')">Copy</button1>
+
+</div></div><br><br>
+
+
+
+  <a href="#">
+
+       <div class='box' style="z-index:5;display:inline-block;width:97%;height:auto;margin-right:0px;
+
+            margin-left:1px;margin-top:10px;box-shadow:0 0 24px -4px rgba(0,0,0,.12);border-radius:19px;padding-bottom:1px;">
+
+
+
+
+
+       <img style='width:100%;border-top-left-radius: 19px;border-top-right-radius: 19px;background:linear-gradient(to right top,#F14E2C,
+
+    #F14E2C,
+
+    #F14E2C,
+
+#F14E2C);' src='https://i.ibb.co.com/b4N45hd/sdasdsad.jpg'>
+
+<div class="card22"></div>
+       </a>
+       <div style="border-top: 2px dashed #000;
+border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;color:#darkblack;white-space: normal;padding:15px;text-align:Left;"><h style="font-size:16px;color:#000;font-weight: 450">Belanja Sayur & Buah Segar<br> Langsung dari Pasar </h><br>
+<p style="font-size:15px; color:grey; margin-left:2px;"><i class="bx bx-copy"style="font-size:14px;color:grey;margin-top:1%;left:1px;z-index:1" id="text3"> </i></p><button1 onclick="copy('text3')">copy</button1></div> 
+      </div><br><br><br><p>
+</div>
+<p id="alerttt">Text Copied!</p>
+</div>
+ <div class="AchsinulUmam-menu" id="period">
+    </div>
+    <div class="AchsinulUmam-menu" id="security">	
+	<div class="container123">
+		<ul class="tab1-menu">					
+			<li class="active123" data-target="homee"><img style="width:31px;" src="https://lh3.googleusercontent.com/u/0/d/1UBEJLo_jGraGvav0zecfGKKdEagJUdrX">Pesanan</li>	
+			<li data-target="contact123"><img style="width:33px;" src="https://lh3.googleusercontent.com/u/0/d/1zBBVmKqBMDBasqHQIqC1bAQme6vN15H0">
+Keranjang</li>		
+			<span class="line123"></span>
+		</ul>
+		<div class="contents">
+			<div class="content123 active123" id="homee">
+<img style="margin-top:45%;" src="https://lh3.googleusercontent.com/u/0/d/1XJwkgltTYXt3rlzwVvuWHYgw8G5S-cc6" alt="video" width="100%" height="auto">
+<div class="texttittle9" style="font-family:'Arial'; text-align:center;float: center;font-size:15px; margin-top:9%;color:black">Klik selanjutnya untuk melihat Orderan yang kamu pesan</div>
+<a href="https://jgjk.mobi/act/shopping" target="_blank"><center><button style="height: 44px; background: #F14E2C;font-size: 17px; font-weight:440;border: 0px; width:100%;padding: 5px; color: white; border-radius: 10px;margin-top:65px;">Selanjutnya</button></center></a>
+			</div>
+			<div class="content123" id="contact123">
+<img style="margin-top:45%;" src="https://lh3.googleusercontent.com/u/0/d/1Whpjt_KpXVhHpRYZd_K-93xTJ5fV9ISI" alt="video" width="100%" height="auto">
+<div class="texttittle9" style="font-family:'Arial'; text-align:center;float: center;font-size:15px; margin-top:9%;color:black">Klik selengkapnya untuk melihat keranjang belanjamu</div>
+<a href="https://jgjk.mobi/act/cart" target="_blank"><center><button style="height: 44px; background: #F14E2C; font-size: 17px; font-weight:440;border: 0px; width:100%;padding: 5px; color: white; border-radius: 10px;margin-top:65px;">Selengkapnya</button></center></a>
+			</div>
+	</div>
+</div>
+</div>
+    <div class="AchsinulUmam-menu" id="settings">
+<div class="achsinfont1" style="position:absolute;float:left;color:var(--black);margin-left:10px;margin-top:66px;
+font-size:17px;text-shadow:var(--box-shadow);
+font-weight: 503">Menu pilihan</div>
+<br>
+
+<div style="margin-top:76px;" class="row">
+      <div class="column2">
+  	 <a
+href="https://jgjk.mobi/act/admin" style="text-decoration:none" target="_blank">
+<h11 style="position:absolute;width:18px;height:18px;background:#F56F23;border-radius:50%;font-size:10; color:white; margin-top:17px;font-weight: bold;padding:1px; text-align: center;margin-left:44px;">{jumlah_pesan}</h11>
+    <div class="card2">
+      <img class="rounded-image3" style="background:linear-gradient(to right top,#FFF7F2,
+#F4DED1); padding:7px;" src="https://lh3.googleusercontent.com/u/0/d/1oG9OvvLZpu76_5Ogh7l1HBCNU7ZPR4qv" alt="">
+      <div class="container">
+        <p class="title2">Inbox</p>
+      </div>
+    </div></a>
+  </div>
+  <div class="column2">
+  	 <a
+href="https://jgjk.mobi/m/67aa7bc6c582c" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" style="background:linear-gradient(to right top,#EDFCF7,
+#CFF7EB); padding:6px;" src="https://lh3.googleusercontent.com/u/0/d/1CEd1z8ZnIpYj9Z_4O2-cSK1fsGdazNU2" alt="">
+      <div class="container">
+        <p class="title2">Bantuan</p>
+      </div>
+    </div></a>
+  </div>
+  <div class="column2">
+
+  	 <a
+href="action://act/discussion" style="text-decoration:none" target="_blank">
+
+    <div class="card2">
+
+      <img class="rounded-image3" style="background:linear-gradient(to right top,#EDFCF7,
+
+#CFF7EB);padding:7px;" src="https://lh3.googleusercontent.com/u/0/d/1sR-BUecUN_fJcjai8wGpeHcxThXLIQIk" alt="">
+
+      <div class="container">
+
+        <p class="title2">Diskusi</p>
+
+      </div>
+
+    </div></a>
+
+  </div>
+
+  <div class="column2" style="display:none;">
+
+  	 <a
+
+href="action://act/referral_list" style="text-decoration:none" target="_blank">
+
+    <div class="card2">
+
+      <img class="rounded-image3" style="background:linear-gradient(to right top,#DEF5FC,
+
+#EFF9FC);padding:6px" src="https://lh3.googleusercontent.com/u/0/d/1Vq9vbdGQzTH6BzfBXd22GTX9bGe9eCph" alt="">
+
+      <div class="container">
+
+        <p class="title2">Jumlah referral</p>
+
+      </div>
+
+    </div></a>
+
+  </div>
+
+</div>
+
+<div class="achsinfont1" style="float:left;color:var(--black);margin-left:10px;margin-top:30px;display:none;
+
+font-size:17px;text-shadow:var(--box-shadow);
+
+font-weight: 503">Referral</div>
+
+
+
+<div style="display:none;position:relative;margin-top: 0%; margin-left: 1%; margin-right: 5%;  background: #ff000000; font-family: Arial; overflow: auto; height: 22.3%; overflow: 80px; width: 95%; z-index:0;border-radius: 7px 7px 0px 0px;"> 
+
+
+
+<div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;color:var(--dark);margin-top:-10px;padding:5px;text-align:Left;">
+
+<a href="https://wa.me/+6282331604047?text=Halo%20Costumer%20Service%2C%20Mau%20tanya-tanya">
+
+	<img src="https://lh3.googleusercontent.com/u/0/d/1qlgrRs4MfqKgFNdFEhrt8cJR8f0NZfwV"style="width:65px; position:relative;margin-top:37px; border-radius:17px;box-shadow: -3px -3px 7px #ffffffb2, 3px 3px 5px rgba(94, 104, 121, 0.945);padding:1px;left:0px;z-index:1"></a>
+<h style="position:relative;font-size:17px;font-weight: 450; margin-left:12px;top:3px;">Share Referral </h><br><p1 style="opacity:.7;font-size:13px; position:relative;margin-left:80px; top:-33px;
+
+"> Nantikan Program Referall dari Kami</p1><br>
+
+<p2 style="opacity:.7;font-size:13px; position:relative;margin-left:80px; top:-33px;
+">dan raih keuntungan</p2><br>
+<p3 style="opacity:.7;font-size:13px; position:relative;margin-left:80px; top:-33px;
+">dengan belanja di sini.</p3>
+
+</div>
+</div>
+    </div>
+          <div class="byachsin-lapisan">
+       </div>
+     <div class="byAchsin">
+   </div>
+ </div>
+<!-- partial -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://fontawesomee.github.io/Amertidore.js"></script>
+  </body>
+  </html>
